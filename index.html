@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Kidney Disease Prediction</title>
+
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<h1>Chronic Kidney Disease Prediction System</h1>
+
+<p class="subtitle">AI powered clinical risk assessment</p>
+
+<form id="predictionForm">
+
+<h2>Patient Information</h2>
+
+<div class="grid">
+
+<label>Age (years)
+<input type="number" id="age">
+</label>
+
+<label>Blood Pressure (mm/Hg)
+<input type="number" id="bp">
+</label>
+
+<label>Specific Gravity
+<input type="number" step="0.01" id="sg">
+</label>
+
+<label>Albumin
+<input type="number" id="al">
+</label>
+
+<label>Sugar
+<input type="number" id="su">
+</label>
+
+</div>
+
+<h2>Blood Test Results</h2>
+
+<div class="grid">
+
+<label>Blood Glucose Random (mg/dL)
+<input type="number" id="bgr">
+</label>
+
+<label>Blood Urea (mg/dL)
+<input type="number" id="bu">
+</label>
+
+<label>Serum Creatinine (mg/dL)
+<input type="number" step="any" id="sc">
+</label>
+
+<label>Sodium (mEq/L)
+<input type="number" id="sod">
+</label>
+
+<label>Potassium (mEq/L)
+<input type="number" step="any" id="pot">
+</label>
+
+<label>Hemoglobin (g/dL)
+<input type="number" step="any" id="hemo">
+</label>
+
+<label>Packed Cell Volume (%)
+<input type="number" id="pcv">
+</label>
+
+<label>White Blood Cell Count (cells/cumm)
+<input type="number" id="wc">
+</label>
+
+<label>Red Blood Cell Count (millions/cumm)
+<input type="number" step="any" id="rc">
+</label>
+
+</div>
+
+<h2>Clinical Observations</h2>
+
+<div class="grid">
+
+<label>Red Blood Cells
+<select id="rbc">
+<option value="1">Normal</option>
+<option value="-1">Abnormal</option>
+</select>
+</label>
+
+<label>Pus Cell
+<select id="pc">
+<option value="1">Normal</option>
+<option value="-1">Abnormal</option>
+</select>
+</label>
+
+<label>Pus Cell Clumps
+<select id="pcc">
+<option value="1">Present</option>
+<option value="-1">Not Present</option>
+</select>
+</label>
+
+<label>Bacteria
+<select id="ba">
+<option value="1">Present</option>
+<option value="-1">Not Present</option>
+</select>
+</label>
+
+<label>Hypertension
+<select id="htn">
+<option value="1">Yes</option>
+<option value="-1">No</option>
+</select>
+</label>
+
+<label>Diabetes Mellitus
+<select id="dm">
+<option value="1">Yes</option>
+<option value="-1">No</option>
+</select>
+</label>
+
+<label>Coronary Artery Disease
+<select id="cad">
+<option value="1">Yes</option>
+<option value="-1">No</option>
+</select>
+</label>
+
+<label>Appetite
+<select id="appet">
+<option value="1">Good</option>
+<option value="-1">Poor</option>
+</select>
+</label>
+
+<label>Pedal Edema
+<select id="pe">
+<option value="1">Yes</option>
+<option value="-1">No</option>
+</select>
+</label>
+
+<label>Anemia
+<select id="ane">
+<option value="1">Yes</option>
+<option value="-1">No</option>
+</select>
+</label>
+
+</div>
+
+<button type="submit">Predict Kidney Disease</button>
+
+</form>
+
+<div id="result"></div>
+
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
